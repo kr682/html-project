@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Muscle Blaze  </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<style type="text/css">
+  div{
+    background-color: black;
+    color: white;
+    ckground-color: yellow;
+    inline-size: -webkit-fill-available;
+  }
+  div2 img{
+    height: 54px;
+        width: 58px;
+
+  }
+  .card {
+
+        transition: transform 0.2s;
+        }
+
+    .card:hover {
+        transform: scale(1.05);
+    }
+
+    .product-image {
+       
+        object-fit: cover; 
+    }
+  p{
+    color: white;
+  }
+  h5{
+    color: whitesmoke;
+  }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid">
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div2 class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <img src="data:image/png;base64,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">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about us.html">About Us</a>
+             </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Products</a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="http://127.0.0.1:8000/category/xi">All products</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="http://127.0.0.1:8000/category/sm">Protien </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="http://127.0.0.1:8000/category/ap">Gainer</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="http://127.0.0.1:8000/category/ap">Fat loss</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="http://127.0.0.1:8000/category/ap">pre/post workout</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="http://127.0.0.1:8000/category/ap">Vitamin Supplemnts</a>
+
+                </li>
+                
+
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Type a product name eg. biozyme" aria-label="Search" />
+            <button class="btn btn-success" type="submit">Search</button>
+          </form>
+        </div>
+          <li class="nav-item mx-2">
+            <a href="login.html" class="nav-link text-white">Login 👤</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a href="Registration.html" class="nav-link text-white">Registration ✍</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+<div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner" style="height: 40rem; width: 100rem;">
+    <div class="carousel-item active">
+      
+      <img src="https://img10.hkrtcdn.com/35934/bnr_3593309_o.jpg" class="d-block w-90" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://img6.hkrtcdn.com/35926/bnr_3592535_o.jpg" class="d-block w-90" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://img4.hkrtcdn.com/35926/bnr_3592543_o.jpg" class="d-block w-90" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://img2.hkrtcdn.com/35926/bnr_3592551_o.jpg" class="d-block w-90" alt="...">
+    </div>
+    
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Our Products</h2>
+    <div class="row">
+        <!-- Product Card -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="https://img10.hkrtcdn.com/35686/pck_3568539_c_m.jpg" class="card-img-top product-image" alt="Product Image">
+                <div class="card-body">
+                    <h5 class="card-title">Protein Powder</h5>
+                    <p class="card-text">A high-quality protein powder to fuel your workouts and help you recover.</p>
+                    <p class="text-success fw-bold">₹7800</p>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <!-- Product Card -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="https://img8.hkrtcdn.com/32209/pck_3220857_c_m.jpg" class="card-img-top product-image" alt="Product Image">
+                <div class="card-body">
+                    <h5 class="card-title">Gainer</h5>
+                    <p class="card-text">A rich formula designed for individuals looking to gain weight and muscle mass.</p>
+                    <p class="text-success fw-bold">₹2500</p>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="https://img10.hkrtcdn.com/28330/prd_2832949-MuscleBlaze-MB-Fat-Burner-PRO-60-tablets-Unflavoured_c_s.jpg" class="card-img-top product-image" alt="Product Image">
+                <div class="card-body">
+                    <h5 class="card-title">Fat Burner</h5>
+                    <p class="card-text">An effective fat burner that helps enhance your metabolism.</p>
+                    <p class="text-success fw-bold">₹1500</p>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4"></h2>
+    <div class="row">
+        <!-- Product Card -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="https://img6.hkrtcdn.com/35469/pck_3546815_c_m.jpg" class="card-img-top product-image" alt="Product Image">
+                <div class="card-body">
+                    <h5 class="card-title"> Powder</h5>
+                    <p class="card-text">A high-quality protein powder to fuel your workouts and help you recover.</p>
+                    <p class="text-success fw-bold">₹1800</p>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <!-- Product Card -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="https://img8.hkrtcdn.com/30551/prd_3055067-MuscleBlaze-High-Protein-Oats-1-kg-Dark-Chocolate_c_m.jpg" class="card-img-top product-image" alt="Product Image">
+                <div class="card-body">
+                    <h5 class="card-title">dark chocolate </h5>
+                    <p class="card-text">A rich formula designed for individuals looking to gain weight and muscle mass.</p>
+                    <p class="text-success fw-bold">₹1000</p>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="https://img4.hkrtcdn.com/34953/prd_3495223-MuscleBlaze-Pre-Workout-WrathX-0.66-lb-Voodoo-Black_c_m.jpg" class="card-img-top product-image" alt="Product Image">
+                <div class="card-body">
+                    <h5 class="card-title">pre workout Burner</h5>
+                    <p class="card-text">An effective fat burner that helps enhance your metabolism.</p>
+                    <p class="text-success fw-bold">₹2000</p>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4"></h2>
+    <div class="row">
+        <!-- Product Card -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="https://img8.hkrtcdn.com/32450/pck_3244977_c_m.jpg" class="card-img-top product-image" alt="Product Image">
+                <div class="card-body">
+                    <h5 class="card-title"> combo Powder</h5>
+                    <p class="card-text">A high-quality protein powder to fuel your workouts and help you recover.</p>
+                    <p class="text-success fw-bold">₹18000</p>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <!-- Product Card -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="https://img6.hkrtcdn.com/33236/pck_3323535_c_m.jpg" alt="Product Image">
+                <div class="card-body">
+                    <h5 class="card-title">creatine </h5>
+                    <p class="card-text">A rich formula designed for individuals looking to gain weight and muscle mass.</p>
+                    <p class="text-success fw-bold">₹1000</p>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="https://img4.hkrtcdn.com/35430/prd_3542923-MuscleBlaze-Biozyme-5-in-1-Multivitamin-90-tablets-Unflavoured_c_m.jpg" class="card-img-top product-image" alt="Product Image">
+                <div class="card-body">
+                    <h5 class="card-title">tabletets preworkout</h5>
+                    <p class="card-text">An effective fat burner that helps enhance your metabolism.</p>
+                    <p class="text-success fw-bold">₹2000</p>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <h5>About Muscle Blaze</h5>
+                <p>Your one-stop destination for fitness supplements and health products. We strive to provide the best quality products to help you achieve your fitness goals.</p>
+            </div>
+            <div class="col-md-4 mb-3">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
+                    <li><a href="contact.html" class="text-white text-decoration-none">Contact Us</a></li>
+                    <li><a href="privacy.html" class="text-white text-decoration-none">Privacy Policy</a></li>
+                    <li><a href="terms.html" class="text-white text-decoration-none">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-3">
+                <h5>Follow Us</h5>
+                <a href="#" class="text-white me-2"> <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAQEhAQExAQDw8QDw8PDxAQDw8PDw8PFREWFhcSFRcYHCggGBslGxcVITEhJSotLy4uFx8zRDYtNygtLisBCgoKDg0OGxAQGyslHyUtLS0tLzIrLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS8tLS0tLS0rLS0tLS0tLf/AABEIAOEA4QMBEQACEQEDEQH/xAAcAAEAAgIDAQAAAAAAAAAAAAAABgcBBQIDCAT/xABKEAACAgACBAgJCAgEBwEAAAAAAQIDBBEFBgchEhMxQVFhcYEiMlJykZKhsdE0QlNidKKywRQjJFSUs8LSM0OCkxdzo8PT4fEV/8QAGwEBAAIDAQEAAAAAAAAAAAAAAAUGAgMEAQf/xAA7EQEAAQIDBAULAgYCAwAAAAAAAQIDBAUREiExUQZBYZGxExQiMnFygaHB0eE0UhYkM0JTYiPxFZLw/9oADAMBAAIRAxEAPwC8QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADWaX1gwmEWd99dTyzUW87GuqCzk+5G+xhb1+dLdMyzpt1VcIRPG7WMDB5QrxF31lCEIfekn7CWt9HsVV62kfH7OinB3J4tbbtgh83BSfnYhR90GdNPRq513I7myMDV1y6XtgnzYCP8U3/2zP8Ahrnc+X5Zf+P7WP8Ai9Z+4w/iZf2Hk9HY/wAny/LOMtnmz/xcs/cofxEv7DH+Ho/yfL8s4yqZ/ucltZs/cof78v7DH/wEf5Pl+WyMo1/u+Tmtq9n7lD+Il/YeTkEf5Pl+WcZLr/f8nNbVZ/uUf4h/+M8nIf8Af5flnGRf7/J31bU8/GwbXm4jP3wRhVkVUcK/kTkFfVX8n34baZhZPKdN9fWlXOK+8n7Dnrya9HCYlqryDER6sxKR6K1lweJyVV8JSfzJZ12erLJvuOC7hb1r16ZRt/A37H9SmY8G2zOdygAAAAAAAAAAAAAAADhdbGEXKTUYxTlKUmlGMUs22+ZHsRMzpBEaqj1x2k22uVODk6qlmniMsrbPMz8SPXyvqLXl2RUxEV4jfPL7pCzhN2tau7ZOTcpNylJ5ylJuUpPpbe9llppppjSmNId9NHVDiomWrdFDkoHk1aNkUOagaqrkNtNtyUF1Giq5DfTbdkYLqNc3Ib6bUOyMEYeUbqbcOxRXShttsW4c1FHm22RRDkonk1NkUOXBMJqZxQyka6tOtlsRMaSlurOvF+Gahc5X0cm9521rpi34y6n6URGKy+ivWqjdPyQWYZDbvRNdn0auXVP2WrgcZXdCNlclOuazjJcj/wDfUQVdFVE7NXFS7luu3VNFcaTD6DFgAAAAAAAAAAAAAAqLaprRK2yWBqllVW1+kNP/ABLeXi/Njuz6X2FryPL4inziuN8+r9/sk8Hh923PwV40WXVIRQm+qezi7FKN18nh6JJOMUs77I9OT3QXW8+wgMdntFmZosxtTz6nLfxtNudmiNZWJo/UXRtK3YaFj55XZ3N90ty7kV27mmLuca5j2bvBHV4u9V/d9G4q0Thobo4eiKXIo01x9yOSq9cq41TPxapuVzxmXfHDQXJCC7IxMdqrmx2p5uXEx8mPqo82p5m1PNnio+TH0IbUm1PM4qPkx9CG1PM2qubHEx8mPoQ2p5vdqrmw8PB/Mh6sT3aq5m3Vzl0z0bRLlopfbVB/kexcrjhMsovXI4VT3y1uM1RwFqyeGrj11J1P7mRvoxt+jhVPi67WaYu3OsXJ+O/xQzWHZ7OtOzDSd0VvdU8uNS+q1ul2bn2klYzTa9G5u7VgwPSGKpijERp2xw+KCyWW57mtzT3NPoJGZ13wtFNUTGsJNqJrI8Jcq5y/ZrpJTTe6ub3KxdHMn1b+YjsbYi5TtRxhB51lsYi15WiPTp+ccvsuNEGojIAAAAAAAAAAAAa3WPSSwuGvxG7OutuKfI7Hugu+TSN+FszevU2465bbNublcUx1vO05OTcpNylJuUm97lJvNt959GppimIpjhCzU2tI0TXZfq1HFXSxFseFTh2lGLWcbLuVJ9Kisnl1xILPMdNqiLNE76uPs/LgzC95OnYp4z4LlSKeg2QAAAAAAAAHz4/G10Vztsko1wXCk+rqXO+bIyoomuqKaeLZatV3a4oojWZQDE7TnwnxeFTrT3OdrU5LrSTS9pK05Xu9Kres1vozM0+nc0nsj8pZq1rJTjoOUM4WQy4yqWTlHPkay5U8nvI/EYeqzVpKDx2X3cHXs18J4TzRDafq/GGWNrWWclHEJcmb3Rs9O59q6ztwGIn+nPwTvR7MJmfNq5936wrxkhVUt669QtKPE4OuTedledNm/N8KHI31uLi+8gsRRsXJiHzfNsL5viqqY4Tvj4pEaEaAAAAAAAAAAACDbW8Q44SFa/zcRBS82MZS/Eok1kVGuJ2uUT9krlFrbvTPKFQ8WXLaWXya9Nn2CVOAwy57IcdJ9LsfCX3XFdxQczuzcxVc9uncqOPr2sRV2bu5IzhcYAAAfFpHSuHw6zturq6OFJJvsXK+4zot1V+rGrdZw929OlumZ9iP3bQ8BHklbZ5lUl+LI6YwN6er5pOjIMbVxpiPbLFW0XASe93Q65VZr7rZ7OAvdneyq6P42nhET8W90ZpzC4n/AAb67HlnwU8ppdcXvXoOauzco9aEZfwd+x/UpmGxNbnQ3aop/oceD4qxFbs83gySz/1cH2Hfl0xF7fy3Jzo9NPnnpcdJ09v/AEqYnJqX1L9lql+mSyz4Kw9nD6MuFHLPv/MjcwmJtx7Vd6SbPm0a8drd89Vm6dwSvw99L/zKpxXVLLwX3PJkTbq2a4lT8LdmzeouR1TDz+mTVVT6pG+FjbIMU/2qrm/VWR7fCjL3QI7F75iVP6UWtKrdftj6/VZJxqoAAAAAAAAAAACu9rsvBwkemV0vQoL8ywZBHp1z2QsXR63tV1z2QrZwLNNazzbegdD1qNFEVuUaKo+iCR89uztXKp7ZfOr063Kp7ZfYa2sA4zmkm20kk223kklzg9itdatoMm5VYR5RW6WIaTcv+WnyL6z7ukkrGDj1rnctmW9H9Yi5if8A1+/2QG66U5OUpSnN73KUnKT7W97JGNIjSFrt2qLcbNEREOB7FTNkziXjMZNNNNpremnk0+lM9nSY0l5VRFUaTCaasa/W0uNeJcrqdy4zlurXS/LXt7eQjsRgaavSo3SrWY9H6LkTXh908uqfZyWZONOKqy8G6i6HM84ziyK9KirlMKjE3LFzlVE90oRitmEHPOvFShW3nwZ1KySXQpKS9x3xmNWm+N6xWuk1ymjSuiJnnrolermr1OBg4V5uUsnZZLJzm1yZ9CXMkcd69VdnWpCY3HXcXXtXPhHVDbM1ON51xsODZZHybJx9EmiUir0YfVsNVtWaKucR4Jlsks/aro9OGk/RZD4nNiJ1hX+lFP8AwUT/ALfRbJyKSAAAAAAAAAAACt9rb8LCebiPfWTuS1abfw+q19GY/qfD6q9k9z7Cbm6tU07noXCrKEF0QivYik1cZfLK/Wn2u0xYgFZ7TNZW5PBVSyisniZL5zazVXZyN9y6TvwluI9OpbOj+WRP8zcj3fv9leZnbNa3pXqtqRfjErZviMO98ZNZ2WLphHo637Tnu4qKN0b5QGY59bw0zbtxtVfKE7wWoOj60s6pWyW7hWWTbfdFqPsOOrFXJ61au55jbk+vp7NP+/m7MVqLo6a/wOLflV2WRa7s8vYKcXdp62FvOsbR/fr7dJQzWPZ/bRF2USeIrSzlBr9dFdKy3T7sn1HdZxsVbq93gsGA6Q0Xaoovxszz6vwhOZ27SzJhs81leGtWHsl+z3SSjnyVWt7muhN7n3PpOHGWorjajirmfZZF235eiPSjj2x+FuoilIZAwB5600ssRiV0Yi9f9SR3RVuh9TwO/DW/djwSbZO/26X2W3+ZWabs6wh+k8fytPvR4SuA51EAAAAAAAAAAABWm11+HhPMv99ZK5bXsxUt3ReN1z4fVXk5bn2HfVfWuY3PRVHix81e4rk8XyirjLsPGL4tNY9Yei698lVcp5dLS3R73ku89iNZ0bsNZm9dptx1zEPPt98pylOT4U5ylOT6ZSebfpZ3Rc0jR9UtWot0RRTwjdCU7PdXFjLnZYs8PRk5RfJZY/Fg+lc77lzmFy7MRpCCz7MZw1uLdufSq+ULljHLdzHGoTIADDQFW7S9XI0yWLqjwYWS4N0Ut0bXvU0ubhb8+vtJHC35mNiVx6PZjNf8vcnfHq+zkgbOqalqmNYXnqZpV4rB02SediTrs6XOD4Lb7Vk+8iLtOzXMPmeZ4bzfFV244a6x7J3t4a3AAeedPfKsV9qxH82R0a7n1PL/ANLb92PBI9lHy5/ZrfxQNdcojpP+kj3o8JXGa1DAAAAAAAAAAABWG2F+HhPMv/FA6bFezErh0V4Xfh9VdTlufYZ1Xltqjc9I0+LHzV7jjl8jq9aXMPEQ2p38HATX0ltMPvcP+ka6b030et7eOp7ImfopjM9i4+iTC69mmEVeAqeWTtlZbLLnbm4r7sYiqdXzfPbs3MbX2bvl99UrPEQAAAGo1swiuweKg0m+IslHPy4LhR9sUZ26tKol14C7NrE2645x3dahcyRmp9RWhsguzpxMPJuhP14Zf0HFf3ypPSijS/RVzjwlYJoVkA88af8AlWK+1Yj+bI2avqeX/pbfux4JJsn+XP7Nb+KBjKJ6T/pI96PCVxmKhAAAAAAAAAAAAq7bK/DwfmX++sxqq2Vx6KcLvw+qt5y3PsNVV1b6o3PS1Pix81e43vkFXGXMPEN2rUuWBb8i+mT724f1I13Z0p1TvRyvZx0Rzifupvi2c8XX0KaoXfs4xKno/D9MOMrkuhxsll7Mn3nVTOsavmud29jHXO3f3wk5kigAAA1es2JVWExU383D25Z88nBqK9LSMqeMOnBW/KYiijnMeKgMzq2n1VaGx6p8Vip80ra4d8Yt/wBSNFydZUnpTVret08onxWGalXAPPGn/lWK+1Yj+bIy1fVMv/S2/djwSTZR8uf2a38UBKI6T/pI96PCVxmKhAAAAAAAAAAAAq3bP4+C8zEe+s48Vc2dFy6KcLvw+qunS2n2Mj68TyW2qt6Up8WPmr3E3HB8hq4y5nrxrtYNH/pOHvo57K5KOfNNb4v1kjC7TtUTDowl/wAhfpucpUY6GtzWTWaafKmuVFfpv6TpL6XTciqNY60y2caZWHslh5vKu+ScG+SN2WWX+pZLtS6SSwuJjXZmVc6QYObtMX6I308fZ+Fopkip7IADDArbatrBFpYGEk23GzEZPxUt8K3155S7l0mdO5a+jeXzVX5zXG6N1P1lWmZ7tLovHZ/ot4bBUqSynbnfNZZPOfIn1qKiu4wmXzPOMT5xi6qo4Ruj4JIeIwA88ae+VYr7ViP5sjJ9Uy/9Lb92nwSTZR8uf2a38UD2qNyI6T/pI96PCVxmChAAAAAAAAAAAArTa9XnPBP6mJ99RE5nOkU/Fbei9WkXfh9UE4rc+wh9res9VT0Dhn4MPNj7i208IfLa/Wl2nrEArXX3V912PEwj+qtf6xJeJa+fsl78+lFfzPDTRV5WnhPHsla8lzDao8hXO+OHbH4RJ1EbRemlYNrVM9XddZVJVYhSsgt0bY77IrokvndvL2kzhsyjTSvvVzHZJFczXY3dn2THCaewlqzjiKuyU1CXqyyZJ037dXCqEBcwd+361E9zlidOYWtZzxFMerjIuT7EnmzOblEdcPLeEv3J0pomfhKF6zbQfBlXhE+E1lx845KPXCL5X1v0Mw8vT1J/L+j81VRViZ0jlH1lWFzk25SblKTcpSbbcpPe23ztnsXNV2t0000xFMaRCSahauPG3qUov9Gpala2vBnLlVS6c+fq7UZ0zqhc8zKMLZ2KZ9Orh2RzXejJ88ZAAed9NvPE4n7Tf/NkZ0vqmB/TW/djwSfZOv22X2W38dZnXHoobpPP8rT70eErhNKiAAAAAAAAAAAAgG1SvP8ARJdDvXp4t/kQ+bcKZ9qy9G6tKrkdkfVBo1EDtLPVUu/Rss6qn01Vv0xRcrU60RPY+b3Y0uVR2y+k2NYB130xnGUJRUoyTUotZpp8xjVTFUaTwe01TTO1TOkq90/qlOludSdlPLkt9lfb5S6//pW8Zltdqdq3vp+cLRgc3puehd3Vc+qUbdJExVomouOuVRupvzDOK3VKo6qMQzip89tR00322mtttAal3YxqUk6cPz2NeFNdFafL28nbyEnh6K6988Ebjs7t4aJpo9Kvw9q2tF6Oqw1caaoKFcFkkuVvnbfO30khEaRopF+/cv3JuXJ1mX1hqAMMDznj58K22XlW2S9M2zdRD6vhY2bFEdkeCZbJK/2u2XRhZL02V/AzuxpSgOlFX8vRH+30lbZzKOAAAAAAAAAAACIbSMPwqKp+Rck+pSjL80iKzen/AIYnlKbyK5s4iaecIFXWViZWmqpa+q9/DwtD8mCrfbDwfyLhl9zbw9E9mnco2Ot7GIrjt8d7anY5AAAyA1mkNA4a/fKtKT+fHwJd+XL3nHewNi7vqp38+Dqs4y9Z9Src012pFT8W6cfOjGXuyI+rJLfVVKQozu7HrUxLrjqJX86+bX1YRj78z2nJaI41SynPbvVTDaaO1VwlLUlVxklyStfDafSlyL0HfZwNm1viN/a4r+ZYm9uqq0js3N2kdjgZAAAPk0ti1RTdc+Sqqyz1Yt5HsNti3N27TRHXMQ86xN9t9ZiNI0WRsfw74WKsy3KNNafS25Nr2R9JliOEQp3Sm5/To9s/RZpyqkAAAAAAAAAAADXawYLj8PbWuVxzj58Xwo+1HNi7XlbNVLpwl7yN6mvlKr6qyj1zpK6TVrCXal49Qbok8lN8KHn5ZOPekvR1k3k2MimqbNXXw+yAzbDzVpdjq4pmWZAgAAAAAAAAAAAAV5tW1gjGtYKD/WWcGd2XzK081F9beT7F1jXRZ+jmAm5d84qj0aeHbP4VdE6bS7yuvZvo3iMFBtZTvk75dkklH7qi+813qtqp84zvExfxdWnCnd3cfmlJqRAAAAAAAAAAAADAgms+iOKtdkV+rtbfmTfKu/l9JUc3wc2q/KU+rPylY8uxm3b8nVxj5w1tcCDmqYnc7qp1SjRWsGSUbc3lyWLe/wDUvzRYcDn0UxsYjv8Aug8Rl+/at9zfUYyufizjLqTWfoLDaxdm7GtFUT8UbXbro9aHdmb9WDJ6AAAAAAYzA+fF6QppWdltda+vOMfeYVXaKY1qmIbLdm5cnSimZ+CGax7QYRi4YVcZZvXGyi1XDrSe+T9nacdWOondRvT2ByC5XMVYjdTy6/wqrGWTnOU5ylOc5OUpSecpSfOzbar13rxYoot0RRRGkQ3mpWr0sdfGLT4itqV8uRcHmguuXJ2Zs76a9IRmc5jGEszET6c7o+/wXpCKSSW5JZJLkSNT5xrqyAAAAAAAAAAAAADqxFEbIuEkpRksmma7tum5TNFUaxLKiuqirapneiOktCTpblHOdfM/nR874lNzHKbliZqo30/OPanMPj6bkaVbpfHCJBTLqmXaomOrXLui5LkbXY2jOL9yOFU97XNNM9Tmrp+XP15GXnd+P76u+WPk6OUdxx9n0k/Xl8T3zy/++rvk8lR+2HF4iz6Sz15fEy89v/5Ku+Xvkrf7YcJYi36Sz15/EyjGX/31d8sotW/2x3OizE2/S2f7k/iZxjL/AO+rvltps2v2x3PiuxV30tv+5P4m2nF3v3z3y6KLNr9sdzXYm2x8s5vtnJ/mbov3J41T3uq3atxwpjuhqr6zZTVMu+3ufDbE67NekummWw0DqlfjpJpcXRn4V8l4OXRBfOfs6yfwtNU7+pw47OLOEiYidauX35Lf0LomnCVRpqjwYR3tvfKcueUnztneomJxNzEXJuXJ3y+8NAAAAAAAAAAAAAAABjID4sRomme/g8Fvnj4L+BGYnKMLfnWadJ5xub7eJuUbonc+GegfJs9aP5pkPd6Nf47nfDpjHz1w63oSzyoel/A5KujWI6qqfmz8+p5Sw9DW/U9Z/A1z0cxfOnv/AA989o7WP/xrfqes/gefw7i+dPf+Dz2jtYehbfqes/gP4dxfOnv/AA989t9ri9CXfU9Z/Ay/h7F86e/8Mox1vtdU9AXP6P1n8DKOj+L509/4ZRmFuObos1ZvfPV60v7TbGQ4qOunv/DbGaWo6pdEtTr38+pd83/SdFGR3+uqGyM5tR/bLFeoTk/DxCS51CvP2t/kddvJZj1q+6HlWfaepR3y2+j9S8HU1Jwd0lz3PhL1VlH2ElZy+zb36az2uG/m+KuxptaR2f8A2qQxiluSSS3JLdkjtRnFkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB//Z">
+                krkunal2346@gmail.com<br>
+                9971135770</i></a>
+                
+            </div>
+        </div>
+        <hr class="my-4">
+        <p>&copy; 2024 Muscle Blaze. All rights reserved.</p>
+    </div>
+</footer>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    
+ 
+
+  </body>
+</html>
